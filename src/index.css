@@ -1,0 +1,114 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 40% 98%;
+    --foreground: 25 47% 15%;
+
+    --card: 30 40% 98%;
+    --card-foreground: 25 47% 15%;
+
+    --popover: 30 40% 98%;
+    --popover-foreground: 25 47% 15%;
+
+    --primary: 25 70% 33%;
+    --primary-foreground: 30 40% 98%;
+
+    --secondary: 30 30% 85%;
+    --secondary-foreground: 25 47% 15%;
+
+    --muted: 30 30% 90%;
+    --muted-foreground: 25 47% 35%;
+
+    --accent: 30 30% 85%;
+    --accent-foreground: 25 47% 15%;
+
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 30 40% 98%;
+
+    --border: 25 47% 80%;
+    --input: 25 47% 80%;
+    --ring: 25 70% 33%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 20 40% 10%;
+    --foreground: 30 40% 98%;
+
+    --card: 20 40% 10%;
+    --card-foreground: 30 40% 98%;
+
+    --popover: 20 40% 10%;
+    --popover-foreground: 30 40% 98%;
+
+    --primary: 25 70% 33%;
+    --primary-foreground: 30 40% 98%;
+
+    --secondary: 30 30% 20%;
+    --secondary-foreground: 30 40% 98%;
+
+    --muted: 30 30% 20%;
+    --muted-foreground: 30 40% 70%;
+
+    --accent: 30 30% 20%;
+    --accent-foreground: 30 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 30 40% 98%;
+
+    --border: 25 47% 30%;
+    --input: 25 47% 30%;
+    --ring: 25 70% 50%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-rodeo-tan;
+  }
+  
+  .rodeo-container {
+    @apply relative overflow-hidden;
+    background-image: url('/lovable-uploads/8a927ff6-08f2-4a30-b2ab-73ee70784db0.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  
+  .rodeo-container::before {
+    content: "";
+    @apply absolute inset-0 bg-rodeo-overlay z-0;
+  }
+}
